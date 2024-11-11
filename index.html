@@ -12,9 +12,14 @@
         window.onload = function() {
             const canvas = document.getElementById('riveCanvas');
             const riveInstance = new rive.Rive({
-                src: 'fortune_wheel_rewards_program.riv',
+                src: 'https://yourusername.github.io/your-repository-name/your-animation.riv',
                 canvas: canvas,
-                autoplay: true,
+                autoplay: false, // Disable autoplay
+            });
+
+            // Add click event listener to the canvas
+            canvas.addEventListener('click', () => {
+                riveInstance.play(); // Play the animation on click
             });
         };
     </script>
